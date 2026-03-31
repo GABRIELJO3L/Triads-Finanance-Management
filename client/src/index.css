@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #141416;
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+.sidebar-link {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all duration-200 font-medium text-sm;
+}
+
+.sidebar-link.active {
+  @apply text-white bg-orange-600 shadow-lg shadow-orange-950/20;
+}
+
+.card {
+  @apply bg-[#141416] rounded-2xl p-6 border border-white/5 shadow-xl;
+}
+
+.stat-card {
+  @apply bg-[#141416] rounded-2xl p-5 border border-white/5 shadow-xl;
+}
+
+.btn-primary {
+  @apply bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2.5 px-5 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-lg shadow-orange-900/30;
+}
+
+.btn-secondary {
+  @apply bg-white/10 hover:bg-white/15 text-white font-medium py-2.5 px-5 rounded-xl transition-all duration-200 flex items-center gap-2;
+}
+
+.btn-danger {
+  @apply bg-red-600/20 hover:bg-red-600/40 text-red-400 font-medium py-2 px-4 rounded-xl transition-all duration-200;
+}
+
+.input {
+  @apply bg-[#000000] border border-white/10 text-white rounded-xl px-4 py-2.5 text-sm w-full focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500/50 placeholder-slate-500 transition-all duration-200;
+}
+
+.label {
+  @apply block text-sm font-medium text-slate-400 mb-1.5;
+}
+
+.badge-green {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400;
+}
+
+.badge-red {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-red-500/20 text-red-400;
+}
+
+.badge-yellow {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-400;
+}
+
+.page-title {
+  @apply text-2xl font-bold text-white;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-white;
+}
+
+.text-money-green {
+  @apply text-emerald-400 font-bold;
+}
+
+.text-money-red {
+  @apply text-red-400 font-bold;
+}
+
+.table-head {
+  @apply text-xs font-medium text-slate-500 uppercase tracking-wider text-left py-3 px-4;
+}
+
+.table-cell {
+  @apply py-3 px-4 text-sm text-slate-300;
+}
+
+.modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm;
+}
+
+.modal-box {
+  @apply bg-[#141416] rounded-2xl border border-white/10 shadow-2xl w-full max-w-lg p-6 mx-4 max-h-[90vh] overflow-y-auto;
+}
